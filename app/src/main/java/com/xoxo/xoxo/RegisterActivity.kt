@@ -12,9 +12,19 @@ class RegisterActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.register_activity)
+
         val btnCrear = findViewById<MaterialButton>(R.id.btnCrear)
         btnCrear.setOnClickListener {
             startActivity(Intent(this, CrearActivity::class.java))
+
+
+        }
+
+        val btnInicio = findViewById<MaterialButton>(R.id.btnInicio)
+        btnInicio.setOnClickListener {
+            startActivity(Intent(this, InicioActivity::class.java))
+
+
         }
     }
 }

@@ -7,11 +7,537 @@
     android:orientation="vertical"
     android:background="@drawable/degradado"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:text="Hola"
+            android:textColor="@color/black"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:textSize="36sp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/notificacion"/>
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="360dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/search"
+        android:background="@drawable/buscador"
+        />
+
+    <ViewFlipper
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:autoStart="true"
+        android:baselineAligned="false"
+        android:flipInterval="3200"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="22dp"
+        android:elevation="20dp"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
 
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel1" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel2" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel3" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ViewFlipper>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo lanzamiento"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="normal|bold"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-80dp">
+
+            <!-- Imagen Producto 1 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageProducto1"
+                android:layout_width="150dp"
+                android:layout_height="173dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- Rectángulo rojo para la oferta -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_rectangle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto1"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-20%"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Botón flotante para la primera imagen -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                app:maxImageSize="25sp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto1"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto1"
+                app:layout_constraintBottom_toBottomOf="@+id/imageProducto1"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto1"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.FloatingActionButton.Circle"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="150dp"/>
+
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="-25dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:rating="5"
+                android:progressTint="@android:color/holo_orange_light"
+                app:layout_constraintTop_toBottomOf="@+id/imageProducto1"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto1"/>
+
+            <!-- Texto "Smile" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smile"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="78dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar1"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar1"/>
+
+            <!-- Texto "Algodon Dulce" -->
+            <TextView
+                android:id="@+id/textalgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Algodon Dulce"
+                android:layout_marginTop="-2dp"
+                android:layout_marginLeft="-163dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar1"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar1"/>
+
+            <!-- Precio -->
+            <TextView
+                android:id="@+id/textprecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/15"
+                android:layout_marginLeft="-90dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/textalgo"
+                app:layout_constraintStart_toEndOf="@+id/textalgo"/>
+
+            <!-- Precio con descuento -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/12"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="-16dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio"
+                app:layout_constraintStart_toEndOf="@+id/textprecio"/>
+
+
+            <!-- ImageButton -->
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add"
+                android:background="@drawable/rounded_background2"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio"
+                app:layout_constraintStart_toEndOf="@+id/textprecio"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="-35dp"/>
+
+
+
+
+
+
+
+
+
+
+            <!-- Imagen Producto 2 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageProducto2"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel1"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageProducto1"/>
+
+            <!-- Rectángulo rojo para la oferta -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_rectangle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto2"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-20%"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Botón flotante para la segunda imagen -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabHeart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                app:maxImageSize="25sp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto2"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageProducto2"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto2"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.FloatingActionButton.Circle"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="150dp"/>
+
+            <!-- RatingBar para la segunda imagen -->
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="-25dp"
+                android:rating="5"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:progressTint="@android:color/holo_orange_light"
+                app:layout_constraintTop_toBottomOf="@+id/imageProducto2"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto2"/>
+
+
+            <!-- Texto "Smile" para la segunda imagen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smile2"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="78dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar2"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar2"/>
+
+            <!-- Texto "Algodon Dulce" para la segunda imagen -->
+            <TextView
+                android:id="@+id/textalgo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Algodon Dulce 2"
+                android:layout_marginTop="-2dp"
+                android:layout_marginLeft="-163dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar2"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar2"/>
+
+            <!-- Precio para la segunda imagen -->
+            <TextView
+                android:id="@+id/textprecio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/15"
+                android:layout_marginLeft="-90dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/textalgo2"
+                app:layout_constraintStart_toEndOf="@+id/textalgo2"/>
+
+            <!-- Precio con descuento para la segunda imagen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/12"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="-16dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio2"
+                app:layout_constraintStart_toEndOf="@+id/textprecio2"/>
+            <!-- ImageButton -->
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add"
+                android:background="@drawable/rounded_background2"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio2"
+                app:layout_constraintStart_toEndOf="@+id/textprecio2"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="-35dp"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageProducto3"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:shapeAppearanceOverlay="@style/radius"
+                android:src="@drawable/carusel2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageProducto2"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <!-- Rectángulo rojo para la oferta -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_rectangle"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto3"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-20%"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="4dp" />
+            </LinearLayout>
+            <!-- Botón flotante para la primera imagen -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabHeart3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/heart"
+                app:maxImageSize="25sp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintTop_toTopOf="@+id/imageProducto3"
+                app:layout_constraintStart_toStartOf="@+id/imageProducto3"
+                app:layout_constraintBottom_toBottomOf="@+id/imageProducto3"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto3"
+                app:shapeAppearance="@style/ShapeAppearanceOverlay.FloatingActionButton.Circle"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="150dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="-25dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
+                android:rating="5"
+                android:progressTint="@android:color/holo_orange_light"
+                app:layout_constraintTop_toBottomOf="@+id/imageProducto3"
+                app:layout_constraintEnd_toEndOf="@+id/imageProducto3"/>
+
+
+            <!-- Texto "Smile" para la tercera imagen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smile3"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="78dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar3"
+                app:layout_constraintStart_toStartOf="@+id/ratingBar3"/>
+
+            <!-- Texto "Algodon Dulce" para la tercera imagen -->
+            <TextView
+                android:id="@+id/textalgo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Algodon Dulce3"
+                android:layout_marginTop="-2dp"
+                android:layout_marginLeft="-163dp"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar3"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar3"/>
+
+            <!-- Precio para la tercera imagen -->
+            <TextView
+                android:id="@+id/textprecio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/15"
+                android:layout_marginLeft="-90dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_marginTop="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/textalgo3"
+                app:layout_constraintStart_toEndOf="@+id/textalgo3"/>
+
+            <!-- Precio con descuento para la tercera imagen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/12"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="-16dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio3"
+                app:layout_constraintStart_toEndOf="@+id/textprecio3"/>
+            <!-- ImageButton -->
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/add"
+                android:background="@drawable/rounded_background2"
+                app:layout_constraintTop_toBottomOf="@+id/textprecio3"
+                app:layout_constraintStart_toEndOf="@+id/textprecio3"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="-35dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation"
+        app:labelVisibilityMode="selected"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:background="@drawable/background_rounded_corners" />
 
 </LinearLayout>

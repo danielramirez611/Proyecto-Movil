@@ -166,6 +166,7 @@
         android:layout_gravity="center_horizontal" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInicio"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/img_6"

@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="radius">
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+
+    </style>
+
+    <style name="FloatingActionButton.Round" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.FloatingActionButton.Circle</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.FloatingActionButton.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+<item name="android:color">@color/negro</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+
+
 </resources>

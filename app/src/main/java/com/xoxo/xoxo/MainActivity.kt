@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 // Método llamado cuando el temporizador llega a cero
-                val intent = Intent(this@MainActivity, RegisterActivity::class.java)
+                val intent = Intent(this@MainActivity, InicioActivity::class.java)
                 startActivity(intent)
                 finish() // Finaliza la actividad actual para que no se pueda volver atrás
             }
