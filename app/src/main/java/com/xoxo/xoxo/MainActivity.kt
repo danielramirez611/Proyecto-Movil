@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.xoxo.xoxo.Inicio.InicioActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +20,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Temporizador para esperar 10 segundos antes de pasar a otra actividad
-        object : CountDownTimer(6000, 600) {
+        // Temporizador para esperar 6 segundos antes de pasar a otra actividad
+        object : CountDownTimer(3000, 300) {
             override fun onTick(millisUntilFinished: Long) {
                 // Método llamado cada segundo mientras el temporizador esté en marcha
             }

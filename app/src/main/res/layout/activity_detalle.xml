@@ -77,7 +77,7 @@
 
     <!-- Primer texto -->
     <TextView
-        android:id="@+id/textCategoria"
+        android:id="@+id/txtColeccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -91,15 +91,15 @@
 
     <!-- Segundo texto -->
     <TextView
-        android:id="@+id/textNProdcuto"
+        android:id="@+id/txtProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Algodón Dulce"
         android:textColor="#000000"
         android:textStyle="bold"
         android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="@id/textCategoria"
-        app:layout_constraintTop_toBottomOf="@id/textCategoria"
+        app:layout_constraintStart_toStartOf="@id/txtColeccion"
+        app:layout_constraintTop_toBottomOf="@id/txtColeccion"
         android:layout_marginTop="-3dp"/>
     <!-- Rectángulo rojo para la oferta -->
     <LinearLayout
@@ -109,8 +109,8 @@
         android:layout_marginRight="-50dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
-        app:layout_constraintRight_toRightOf="@+id/textNProdcuto"
-        app:layout_constraintTop_toTopOf="@+id/textCategoria">
+        app:layout_constraintRight_toRightOf="@+id/txtProducto"
+        app:layout_constraintTop_toTopOf="@+id/txtColeccion">
 
         <TextView
             android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
         android:scaleX="0.3"
         android:scaleY="0.3"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textNProdcuto" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProducto" />
 
     <TextView
         android:id="@+id/textDescripcion"
@@ -215,7 +215,8 @@
         android:textStyle="bold"
         android:gravity="center"
         android:background="@null"
-        android:inputType="number"
+        android:inputType="none"
+        android:focusable="false"
         android:text="1"
         app:layout_constraintEnd_toStartOf="@id/btnSuma"
         app:layout_constraintTop_toBottomOf="@id/textprecio" />

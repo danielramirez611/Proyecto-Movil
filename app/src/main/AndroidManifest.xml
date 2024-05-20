@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso para acceder a Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permiso para acceder al estado de la red -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +17,27 @@
         android:theme="@style/Theme.XOXOSKINCARE"
         tools:targetApi="31">
         <activity
-            android:name=".ColeccionActivity"
+            android:name=".PerfilActivity"
+            android:exported="false"
+            android:theme="@style/Theme.XOXOSKINCARE" />
+        <activity
+            android:name=".Favorito.FavoritoActivity"
             android:exported="false" />
         <activity
-            android:name=".ComprarActivity"
+            android:name=".Notificacion.NotificacionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.XOXOSKINCARE" />
+        <activity
+            android:name=".Coleccion.ColeccionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Comprar.ComprarActivity"
             android:exported="false" />
         <activity
             android:name=".DetalleActivity"
             android:exported="false" />
         <activity
-            android:name=".InicioActivity"
+            android:name=".Inicio.InicioActivity"
             android:exported="false" />
         <activity
             android:name=".CrearActivity"

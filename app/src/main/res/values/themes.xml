@@ -7,10 +7,11 @@
     </style>
 
     <style name="Theme.XOXOSKINCARE" parent="Base.Theme.XOXOSKINCARE" />
-        <style name="BottomNavigation">
-            <item name="android:background">@color/rosado</item>
-            <item name="itemIconTint">@color/black</item>
-            <item name="itemTextColor">@color/black</item>
 
-        </style>
+    <style name="BottomNavigation">
+        <item name="android:background">@color/rosado</item>
+        <item name="itemIconTint">@color/black</item>
+        <item name="itemTextColor">@color/black</item>
+
+    </style>
 </resources>

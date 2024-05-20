@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/degradado"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <ViewFlipper
         android:layout_width="match_parent"
@@ -100,10 +100,15 @@
 
     <!-- Email Input -->
     <EditText
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="50"
         android:paddingLeft="10dp"
         android:background="@drawable/text"
         android:drawableLeft="@drawable/img_3"
@@ -112,10 +117,15 @@
 
     <!-- Password Input -->
     <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="50"
         android:paddingLeft="10dp"
         app:passwordToggleEnabled="true"
         android:drawablePadding="8dp"
@@ -166,7 +176,7 @@
         android:layout_gravity="center_horizontal" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnInicio"
+        android:id="@+id/btnPerfil"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/img_6"

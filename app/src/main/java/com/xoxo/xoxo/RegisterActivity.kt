@@ -2,10 +2,10 @@ package com.xoxo.xoxo
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
+import com.xoxo.xoxo.Inicio.InicioActivity
 
 class RegisterActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +20,9 @@ class RegisterActivity: AppCompatActivity() {
 
         }
 
-        val btnInicio = findViewById<MaterialButton>(R.id.btnInicio)
-        btnInicio.setOnClickListener {
-            startActivity(Intent(this, InicioActivity::class.java))
+        val btnPerfil = findViewById<MaterialButton>(R.id.btnPerfil)
+        btnPerfil.setOnClickListener {
+            startActivity(Intent(this, PerfilActivity::class.java))
 
 
         }

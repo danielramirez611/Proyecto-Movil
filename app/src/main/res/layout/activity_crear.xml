@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    tools:context=".MainActivity">
+    tools:context=".CrearActivity">
 
     <ImageView
         android:layout_width="110dp"
@@ -28,32 +28,46 @@
         android:textSize="35sp"
         android:textStyle="bold" />
     <EditText
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
         android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="50"
         android:background="@drawable/text"
         android:drawableLeft="@drawable/img_3"
         android:drawablePadding="8dp"
         />
     <EditText
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:background="@drawable/text"
         android:drawableLeft="@drawable/img_7"
         android:drawablePadding="8dp"
         android:inputType="textEmailAddress"/>
     <!-- Password Input -->
     <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="283dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:maxLength="16"
         app:passwordToggleEnabled="true"
         android:drawablePadding="8dp"
         android:background="@drawable/text"
@@ -61,10 +75,12 @@
         android:inputType="textPassword"/>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCuenta"
-        android:layout_width="270dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textColor="@color/white"
         android:layout_marginTop="43dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:backgroundTint="@color/black"
         app:cornerRadius="30dp"
         android:text="Registrarse"
@@ -72,7 +88,7 @@
         android:layout_gravity="center_horizontal" />
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="270dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
         android:drawableLeft="@drawable/img_6"
         android:textColor="@color/black"
@@ -80,6 +96,8 @@
         android:backgroundTint="@color/white"
         app:cornerRadius="30dp"
         android:paddingLeft="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
         android:textSize="18dp"
         android:text="Ingresar con correo"
         android:layout_gravity="center_horizontal" />
